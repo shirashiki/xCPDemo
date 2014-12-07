@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<realtime:RealTimeSearch xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsDatatypes="http://xcp.emc.com/datatypes" xmlns:realtime="http://xcp.emc.com/search/realtime" urn="urn:mg1:com.emc.xcp.artifact.search.realtime:Artifacts/Real-time Queries/school_search.realtime" categoryId="com.emc.xcp.artifact.search.realtime" name="school_search" label="School Search">
+  <datasource categoryId="com.emc.xcp.artifact.dataservice.datasourcecontract" name="school_search" label="School Search" implCategoryId="com.emc.xcp.artifact.search.realtime">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="input_school_name" label="School Name">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <outputs xsi:type="nsDataserviceContract:AttributeElement" name="Result Count">
+      <attributeType xsi:type="nsAttributeDatatypes:IntegerType"/>
+    </outputs>
+    <outputs xsi:type="nsDataserviceContract:ArrayElement" name="Results">
+      <item xsi:type="nsDataserviceContract:StructureElement" name="Items">
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="id" label="Object ID">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="school_name" label="School Name">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="school_address" label="Address">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="phone" label="Phone">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+        <elements xsi:type="nsDataserviceContract:AttributeElement" name="r_object_type" label="Object type" sortable="true" hidden="true">
+          <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+        </elements>
+      </item>
+    </outputs>
+    <primaryElement>
+      <dataModel href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#/"/>
+    </primaryElement>
+  </datasource>
+  <inputParameters label="School Name" name="school_name">
+    <formInputs xsi:type="realtime:RealTimeStringFormInput" operator="com.emc.xcp.model.common.StringOperator:CONTAIN" isCaseInsensitive="true">
+      <contextSelection>
+        <parentRef>
+          <dataRef href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#/"/>
+        </parentRef>
+        <dataRef href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#//@attributes[name='school_name']"/>
+      </contextSelection>
+    </formInputs>
+  </inputParameters>
+  <columns label="Object ID">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:xcp:com.emc.xcp.artifact.basetype:Artifacts/Base Type/basetype.basetype#//@attributes[name='r_object_id']"/>
+    </contextSelection>
+  </columns>
+  <columns label="School Name">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#//@attributes[name='school_name']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Address">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#//@attributes[name='school_address']"/>
+    </contextSelection>
+  </columns>
+  <columns label="Phone">
+    <contextSelection>
+      <parentRef>
+        <dataRef href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#/"/>
+      </parentRef>
+      <dataRef href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#//@attributes[name='phone']"/>
+    </contextSelection>
+  </columns>
+  <defaultSort ascending="true"/>
+  <dataType xsi:type="nsDatatypes:BusinessObject" href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#/"/>
+  <resultOrientation>
+    <dataRef href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#/"/>
+  </resultOrientation>
+</realtime:RealTimeSearch>

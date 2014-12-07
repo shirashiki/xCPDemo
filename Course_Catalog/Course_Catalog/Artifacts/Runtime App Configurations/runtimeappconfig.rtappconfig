@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rtappconfig:RuntimeAppConfig xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:rtappconfig="http://www.emc.com/xcp2/2010/rtappconfig" urn="urn:mg1:com.emc.xcp.artifact.rtappconfig:Artifacts/Runtime App Configurations/runtimeappconfig.rtappconfig" categoryId="com.emc.xcp.artifact.rtappconfig" name="runtimeappconfig" label="runtimeappconfig">
+  <defaultHomePage href="urn:mg1:com.emc.xcp.artifact.page:Artifacts/Pages/school_search.page#/"/>
+  <appTitle exprStr="Course Catalog"/>
+  <defaultHomePageExpression/>
+  <objectIdExpression/>
+</rtappconfig:RuntimeAppConfig>

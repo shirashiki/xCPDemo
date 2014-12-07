@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsDatatypes:Relation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsDataserviceContract="http://xcp.emc.com/DataserviceContract" xmlns:nsDatatypes="http://xcp.emc.com/datatypes" urn="urn:mg1:com.emc.xcp.artifact.relation:Artifacts/Relationships/course_school.relationship" categoryId="com.emc.xcp.artifact.relation" name="course_school" label="Course-School" targetRoleName="school" targetRoleLabel="School" fromCardinality="-1" subjectRoleName="course" subjectRoleLabel="Course" toCardinality="1" bidirectional="true">
+  <from xsi:type="nsDatatypes:BusinessObject" href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/course.businessobj#/"/>
+  <to xsi:type="nsDatatypes:BusinessObject" href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#/"/>
+  <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_relate_course_school_course" label="Relate Course-School Course" implCategoryId="com.emc.xcp.artifact.relation">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="id">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="targetId">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <primaryElement dataModel="/"/>
+    <actionType xsi:type="nsDataserviceContract:RelateActionType" type="Relate">
+      <target href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/course.businessobj#/"/>
+    </actionType>
+  </dataActionContracts>
+  <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_relate_course_school_school" label="Relate Course-School School" implCategoryId="com.emc.xcp.artifact.relation">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="id">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="targetId">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <primaryElement dataModel="/"/>
+    <actionType xsi:type="nsDataserviceContract:RelateActionType" type="Relate">
+      <target href="urn:mg1:com.emc.xcp.artifact.bo:Artifacts/Business Objects/school.businessobj#/"/>
+    </actionType>
+  </dataActionContracts>
+  <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_update_course_school" label="Update Course-School" implCategoryId="com.emc.xcp.artifact.relation">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="id">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <primaryElement dataModel="/"/>
+    <actionType type="Update"/>
+  </dataActionContracts>
+  <dataActionContracts categoryId="com.emc.xcp.artifact.dataservice.dataactioncontract" name="da_def_delete_course_school" label="Delete Course-School" implCategoryId="com.emc.xcp.artifact.relation">
+    <inputs xsi:type="nsDataserviceContract:AttributeElement" name="id">
+      <attributeType xsi:type="nsAttributeDatatypes:StringType"/>
+    </inputs>
+    <primaryElement dataModel="/"/>
+    <actionType type="Delete"/>
+  </dataActionContracts>
+</nsDatatypes:Relation>

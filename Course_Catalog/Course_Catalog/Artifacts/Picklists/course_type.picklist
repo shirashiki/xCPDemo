@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nsPicklist:Picklist xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nsAttributeDatatypes="http://xcp.emc.com/attribute_datatypes" xmlns:nsPicklist="http://xcp.emc.com/picklist" urn="urn:mg1:com.emc.xcp.artifact.picklist:Artifacts/Picklists/course_type.picklist" categoryId="com.emc.xcp.artifact.picklist" name="course_type" label="Course Type">
+  <type xsi:type="nsAttributeDatatypes:StringType"/>
+  <entries label="Classroom" value="classroom"/>
+  <entries label="On-Line" value="on-line"/>
+  <entries label="Mail" value="mail"/>
+</nsPicklist:Picklist>
