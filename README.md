@@ -4,7 +4,7 @@ This is a little demo application, built using Documentum xCP developer edition.
 
 
 #### Tentative GitIgnore
-I did not find a pure xCP gitignore to copy, so I built one based on Eclipse gitignore and xCP Designer Help Version 2.1 User Guide. Let me know if you find problems.
+I did not find a pure xCP gitignore to copy, so I built one based on Eclipse and xCP Designer Help Version 2.1 User Guide. Let me know if you find problems.
 
 
 #### Environment
@@ -21,6 +21,7 @@ Documentum xCP Designer Workstation | Windows 7 64, 6Gb memory
 
 #### Required Running Services
 I needed to start these services manually before application deployment. After starting all services, my VM consumed 8Gb, this is the reason I am recommending 10Gb for the VM.
+
 To start these services, use script xCP_Services.py.
 
 
